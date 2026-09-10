@@ -200,6 +200,6 @@ export const BRAND_ASSETS = {
   kingsChatIcon: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD9WRvpxTu41Rfbjr7YMOHC_8xWWTu0XCHUrOFDaI7hEMUzmzx4zWpQj3BkVAdhgvMRczZPSts4OAxCx1tZaI3SpPeV9mq_pIWzNqe9n5qMRFmoqBzRBkM5Q0pJ_r-YAs1HCLGgJjdj3F1ux-aHrYlAVd34bI2YmyGtpiaPJTWENcn1J5Cvlj8Zq6h6o3WO210bM4Yw81hAXzZZ1YuiR2pTM2LmXEiw2668PTc8rtIWn-DaTIExLQVdpmaIkgx5Oy0yvw',
   kingsChatAvatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBSkMrsK6FvpU7UayxMNUE3sQw1Kd-_x7WejiPGirygGw1Qs-hhVKT_-LExQ0kn4ynXMMsQXeFEPA7SV5oE8wvseorqYVL5A7QXbCgRkE6UO5m0i28r_FeCiFfowej8K0s9vo9cT_k8qF2iqVcX8Cp3-2c4_5OnwStwj4JYoQyBsHEOjheHUP8pBFT6FdblXeKspgq-ebYv0qAUROot1uOR3ZVbMznR0g9oc9pbzCIy8bHde0sCbpcG3_KIkJesFqVUYw',
   craftsmanshipImg: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA9c7t_1iQiHXekEi5zK7kbuIIfgL1FQnRkXhisXEDriQnZbbE36SNspN1sZZksqaqsyYVNZhq0jJ5yZCUeemKNP1PEAyD_bbNaRiO4h98sm1kgb5zHtgsUI8R6SINIiHCnicXqFSFMvZuuvHWh9kUB61OJz5NtVQc8ZSCF2pnobEqvyCt7AhwDOVlJi0O4LKMN3laTf3UP6ZT6UGLI3jYBszmzKTsU4I2dCttj2v5kMpbHU75dAAYJFXhcOPEgKHmUqw',
-  videoSample: '/videos/omnia_fold_s2.m4v',
+  videoSample: 'https://res.cloudinary.com/dnk3ipnep/video/upload/v1789066679/OMNIA_FOLD_S2_2_1.mp4',
   kingsChatUrl: 'https://kingschat.online/user/omniatech'
 };
