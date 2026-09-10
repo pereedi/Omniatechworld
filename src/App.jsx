@@ -36,7 +36,10 @@ export default function App() {
   return (
     <div className="w-full bg-surface min-h-screen flex flex-col antialiased text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
       {/* Sticky Glassmorphic Header */}
-      <Navbar onOpenChatOrder={() => setSelectedOrderProduct(null)} />
+      <Navbar
+        onOpenChatOrder={() => setSelectedOrderProduct(null)}
+        onOpenDeviceModal={handleOpenDeviceModal}
+      />
 
       {/* Main Content Sections */}
       <main className="w-full pt-20 flex-1 flex flex-col">
