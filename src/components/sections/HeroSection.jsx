@@ -8,21 +8,26 @@ export default function HeroSection({ onOpenDeviceModal }) {
       id: 'fold-s2',
       name: 'OMNIA FOLD S2',
       bannerImage: '/images/carousel/fold_s2_banner.png',
+      mobileImage: '/images/carousel/fold_s2_portrait.jpg',
       btnLabel: 'Explore Fold S2',
     },
     {
       id: 'bliss-s1',
       name: 'OMNIA BLISS S1',
       bannerImage: '/images/carousel/bliss_s1_banner.jpg',
+      mobileImage: '/images/carousel/bliss_s1_portrait.jpg',
       btnLabel: 'Explore Bliss S1',
     },
     {
       id: 'prolific-s1',
       name: 'OMNIA PROLIFIC S1',
       bannerImage: '/images/carousel/prolific_s1_banner.jpg',
+      mobileImage: '/images/carousel/prolific_s1_portrait.jpg',
       btnLabel: 'Explore Prolific S1',
     },
   ];
+
+  const touchStartX = React.useRef(0);
 
   const {
     currentSlide,
@@ -32,6 +37,21 @@ export default function HeroSection({ onOpenDeviceModal }) {
     resume,
     progressPercent,
   } = useCarousel({ totalSlides: heroSlides.length, intervalTime: 6500 });
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (!touchStartX.current) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 45) {
+      nextSlide();
+    } else if (diff < -45) {
+      prevSlide();
+    }
+    touchStartX.current = 0;
+  };
 
   return (
     <section id="home" className="relative w-full overflow-hidden bg-surface pb-2xl pt-2">
@@ -48,7 +68,7 @@ export default function HeroSection({ onOpenDeviceModal }) {
                 OMNIA SMARTPHONES
               </span>
             </div>
-            <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight text-balance">
+            <h1 className="font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-on-surface tracking-tight text-balance">
               Technology Designed Around You.
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mt-2xs max-w-xl">
@@ -78,7 +98,7 @@ export default function HeroSection({ onOpenDeviceModal }) {
         </div>
       </div>
 
-      {/* Cinematic Landscape Carousel Container */}
+      {/* Cinematic Responsive Carousel Container */}
       <div className="w-full max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop">
         <div
           className="relative w-full rounded-xl overflow-hidden shadow-[0_24px_54px_-16px_rgba(0,92,174,0.18)] bg-surface-container-lowest border border-surface-variant/40 group"
@@ -86,40 +106,56 @@ export default function HeroSection({ onOpenDeviceModal }) {
           onMouseLeave={resume}
         >
           {/* Slides Stack */}
-          <div className="relative w-full min-h-[380px] sm:min-h-[460px] lg:h-[500px] overflow-hidden">
+          <div
+            className="relative w-full h-[460px] xs:h-[500px] sm:h-[480px] md:h-[500px] lg:h-[540px] overflow-hidden bg-surface-container-lowest"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             {heroSlides.map((slide, index) => {
               const isActive = index === currentSlide;
               return (
                 <div
                   key={slide.id}
                   className={`absolute inset-0 transition-opacity duration-700 ease-in-out flex items-center justify-center ${
-                    isActive ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'
+                    isActive ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 pointer-events-none z-0'
                   }`}
                 >
-                  <img
-                    src={slide.bannerImage}
-                    alt={`${slide.name} Landscape Banner`}
-                    className="w-full h-full object-cover object-center"
-                    loading={index === 0 ? 'eager' : 'lazy'}
+                  {/* Ambient blurred backdrop on mobile for smooth edge blending */}
+                  <div
+                    className="absolute inset-0 md:hidden bg-cover bg-center blur-2xl opacity-40 scale-110 pointer-events-none"
+                    style={{ backgroundImage: `url(${slide.mobileImage})` }}
+                    aria-hidden="true"
                   />
 
-                  {/* Gradient overlay for readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/40 via-transparent to-transparent pointer-events-none" />
+                  {/* Responsive Picture: Portrait poster on mobile/small screens, Landscape banner on md+ */}
+                  <picture className="w-full h-full flex items-center justify-center relative z-10">
+                    <source media="(max-width: 767px)" srcSet={slide.mobileImage} />
+                    <img
+                      src={slide.bannerImage}
+                      alt={`${slide.name} Showcase`}
+                      onClick={() => onOpenDeviceModal(slide.id)}
+                      className="w-full h-full object-contain md:object-cover object-center cursor-pointer select-none"
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                    />
+                  </picture>
+
+                  {/* Desktop gradient overlay for readability */}
+                  <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-inverse-surface/40 via-transparent to-transparent pointer-events-none z-10" />
 
                   {/* Overlay CTA Action */}
-                  <div className="absolute bottom-4 left-4 sm:left-6 z-10 flex items-center gap-xs">
+                  <div className="absolute bottom-3 left-3 right-3 sm:right-auto sm:bottom-4 sm:left-6 z-20 flex flex-wrap items-center gap-xs">
                     <button
                       type="button"
                       onClick={() => onOpenDeviceModal(slide.id)}
-                      className="px-lg py-xs rounded-full bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-all duration-300 shadow-md hover:scale-105"
+                      className="px-md sm:px-lg py-1.5 sm:py-xs rounded-full bg-primary text-on-primary font-label-md text-[11px] sm:text-label-md uppercase tracking-wider hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-all duration-300 shadow-md hover:scale-105 active:scale-95"
                     >
                       {slide.btnLabel}
                     </button>
                     <a
                       href="#kingschat-order"
-                      className="inline-flex items-center gap-2xs px-md py-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface hover:bg-secondary-fixed transition-all duration-300 font-label-md text-label-md uppercase tracking-wider shadow-sm"
+                      className="inline-flex items-center gap-2xs px-sm sm:px-md py-1.5 sm:py-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface hover:bg-secondary-fixed transition-all duration-300 font-label-md text-[11px] sm:text-label-md uppercase tracking-wider shadow-sm active:scale-95"
                     >
-                      <span className="material-symbols-outlined text-[16px] text-primary">chat</span>
+                      <span className="material-symbols-outlined text-[15px] sm:text-[16px] text-primary">chat</span>
                       <span>Order Direct</span>
                     </a>
                   </div>

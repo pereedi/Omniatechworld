@@ -89,16 +89,13 @@ export default function Navbar({ onOpenChatOrder, onOpenDeviceModal }) {
               href="#home"
               onClick={handleNavClick}
               className="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg p-1 group"
-              aria-label="OMNIA Tech Home"
+              aria-label="OMNIA Tech World Home"
             >
               <img
                 src={BRAND_ASSETS.logo}
-                alt="OMNIA Logo"
-                className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                alt="OMNIA Tech World"
+                className="h-7 sm:h-8 md:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="font-headline-sm text-base sm:text-headline-sm font-semibold tracking-tight text-on-surface uppercase">
-                OMNIA
-              </span>
             </a>
           </div>
 

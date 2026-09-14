@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="omniaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#005CAE" />
+      <stop offset="100%" stop-color="#00D9FF" />
+    </linearGradient>
+  </defs>
+  <!-- Outer precision rings representing connectivity & optical precision -->
+  <circle cx="50" cy="50" r="45" stroke="#005CAE" stroke-width="3" stroke-linecap="round" stroke-dasharray="68 15" />
+  <circle cx="50" cy="50" r="36" stroke="#005CAE" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="50 18" transform="rotate(45 50 50)" />
+  <circle cx="50" cy="50" r="27" stroke="url(#omniaGrad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="38 12" transform="rotate(90 50 50)" />
+  <circle cx="50" cy="50" r="18" stroke="#005CAE" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="24 10" transform="rotate(135 50 50)" />
+  <!-- Center Core -->
+  <circle cx="50" cy="50" r="9" fill="url(#omniaGrad)" />
+  <circle cx="50" cy="50" r="3.5" fill="#FFFFFF" />
+</svg>

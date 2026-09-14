@@ -10,15 +10,12 @@ export default function Footer({ onOpenDeviceModal }) {
           {/* Brand Info & Physical Outlets */}
           <div className="lg:col-span-2 flex flex-col gap-lg pr-lg">
             <div className="flex items-center gap-xs">
-              <a href="#home" className="flex items-center gap-xs focus:outline-none">
+              <a href="#home" className="flex items-center gap-xs focus:outline-none group">
                 <img
                   src={BRAND_ASSETS.logo}
-                  alt="OMNIA Logo"
-                  className="h-8 w-auto object-contain"
+                  alt="OMNIA Tech World"
+                  className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
-                <span className="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface uppercase">
-                  OMNIA
-                </span>
               </a>
             </div>
 
