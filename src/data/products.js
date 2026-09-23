@@ -159,8 +159,7 @@ export const PRODUCTS = [
     modalDescription:
       'The foundation of the OMNIA folding era. An expansive 7.71-inch inner canvas transforms everyday smartphone tasks into panoramic desktop-grade productivity.',
     availability: 'Available for reserve through KingsChat @OMNIATECH.',
-    deviceImage:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuADUXtyOvTrqEx1_EVzO7pUqyqyhxsdH_jI4vk3gj6c92_dHsfXnPMr4QMSgPgjGrXqyTmesxpEGXXEsrLcsJuCC3_M4DbAbne9D0xPlX81dTOefvolCGTxwLmgF4uaDGKq0BmBkX7i-9wbf0qcenFhEw83DoLcWHdII44tSyvJBUgo0s1xQH2cddStR0xFkMn7aKQJklNtY5h7LcAVTjKShg_iSNi0hpeC_8dYKarwAFEBzOOQ2-CjmjKow7BaQi4Y1A',
+    deviceImage: '/images/fold_s1_promo.jpg',
     modalImage:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuA-jVqXR_cDeZg5BnYZL4SvGOtxt9Dv8z0y_pkfA9_93vGkk4nF6FOEn7k7I5i99QhO_yaRrvJiKngQ8x9XZbmJAV16D0lamhmkQ55-0zsGOO78-a15-AE83cFxz5w_4N8RdqaDIdKDxNgvyWB5KnX6VVsylR4x7vAizFX7RAizcrNUgUk6e0E6YZMaOa7JBOWKy9h3_oe4j9yJlPL00QwjYHM8Vq2SLquCXSXyz95Y5uyemwSoOUtupuwY1fMFfzpWRg',
     keySpecs: [

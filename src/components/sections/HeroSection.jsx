@@ -84,7 +84,9 @@ export default function HeroSection({ onOpenDeviceModal }) {
               Explore Smartphones
             </a>
             <a
-              href="#kingschat-order"
+              href="https://kingschat.online/user/omniatech"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-xs font-label-lg text-label-lg uppercase tracking-wider px-lg py-sm rounded-full bg-inverse-surface text-secondary-fixed hover:text-on-secondary-fixed hover:bg-surface-container-highest transition-all duration-300 shadow-md hover:-translate-y-0.5"
             >
               <img
@@ -152,7 +154,9 @@ export default function HeroSection({ onOpenDeviceModal }) {
                       {slide.btnLabel}
                     </button>
                     <a
-                      href="#kingschat-order"
+                      href="https://kingschat.online/user/omniatech"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2xs px-sm sm:px-md py-1.5 sm:py-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface hover:bg-secondary-fixed transition-all duration-300 font-label-md text-[11px] sm:text-label-md uppercase tracking-wider shadow-sm active:scale-95"
                     >
                       <span className="material-symbols-outlined text-[15px] sm:text-[16px] text-primary">chat</span>

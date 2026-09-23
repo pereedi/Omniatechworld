@@ -134,7 +134,7 @@ export const VIDEO_CHAPTERS = [
 ];
 
 export const ORDERING_STEPS = [
-  { step: '1', title: 'Discover', desc: 'Browse Fold S2, Bliss S1, or Prolific S1 models.' },
+  { step: '1', title: 'Discover', desc: 'Browse Fold S2, Fold S1, Bliss S1, or Prolific S1 models.' },
   { step: '2', title: 'Explore Specs', desc: 'Review RAM, camera sensors, and battery sizes.' },
   { step: '3', title: 'Compare Devices', desc: 'Find the perfect companion for your daily needs.' },
   { step: '4', title: 'Chat on KingsChat', desc: 'Message @OMNIATECH to confirm device reservation.', highlight: true },

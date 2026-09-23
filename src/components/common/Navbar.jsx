@@ -139,11 +139,10 @@ export default function Navbar({ onOpenChatOrder, onOpenDeviceModal }) {
 
             {/* Direct Order CTA (Responsive: compact pill on mobile, full text on sm+) */}
             <a
-              href="#kingschat-order"
-              onClick={(e) => {
-                if (onOpenChatOrder) onOpenChatOrder(e);
-                handleNavClick();
-              }}
+              href="https://kingschat.online/user/omniatech"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleNavClick}
               className="inline-flex items-center gap-1.5 bg-primary hover:bg-secondary-fixed-dim text-on-primary hover:text-on-secondary-fixed transition-all duration-300 rounded-full px-3 py-1.5 sm:px-5 sm:py-2 shadow-[0_4px_16px_-2px_rgba(0,92,174,0.35)] hover:shadow-[0_8px_24px_-4px_rgba(0,217,255,0.45)] hover:-translate-y-0.5 active:translate-y-0 focus:outline-none"
               aria-label="Order via KingsChat"
             >
